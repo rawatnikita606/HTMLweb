@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .calculator {
+      width: 360px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .calculator input {
+      height: 50px;
+      text-align: right;
+      font-size: 1.5rem;
+    }
+    .calculator .btn {
+      width: 20%;
+      font-size: 1.5rem;
+      margin: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <input type="text" class="form-control mb-3" id="result" disabled readonly>
+
+    <div class="row">
+      <button class="btn btn-secondary" onclick="clearResult()">C</button>
+      <button class="btn btn-secondary" onclick="deleteChar()">DEL</button>
+      <button class="btn btn-secondary" onclick="appendOperator('/')">/</button>
+      <button class="btn btn-secondary" onclick="appendOperator('*')">*</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn-light" onclick="appendNumber('7')">7</button>
+      <button class="btn btn-light" onclick="appendNumber('8')">8</button>
+      <button class="btn btn-light" onclick="appendNumber('9')">9</button>
+      <button class="btn btn-secondary" onclick="appendOperator('-')">-</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn-light" onclick="appendNumber('4')">4</button>
+      <button class="btn btn-light" onclick="appendNumber('5')">5</button>
+      <button class="btn btn-light" onclick="appendNumber('6')">6</button>
+      <button class="btn btn-secondary" onclick="appendOperator('+')">+</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn-light" onclick="appendNumber('1')">1</button>
+      <button class="btn btn-light" onclick="appendNumber('2')">2</button>
+      <button class="btn btn-light" onclick="appendNumber('3')">3</button>
+      <button class="btn btn-primary" onclick="calculate()">=</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn-light" onclick="appendNumber('0')">0</button>
+      <button class="btn btn-light" onclick="appendNumber('.')">.</button>
+      <button class="btn btn-light" style="width: 50%;" onclick="appendOperator('%')">%</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript -->
+  <script>
+    let result = document.getElementById('result');
+
+    function appendNumber(number) {
+      result.value += number;
+    }
+
+    function appendOperator(operator) {
+      result.value += operator;
+    }
+
+    function clearResult() {
+      result.value = '';
+    }
+
+    function deleteChar() {
+      result.value = result.value.slice(0, -1);
+    }
+
+    function calculate() {
+      try {
+        result.value = eval(result.value);
+      } catch (error) {
+        result.value = 'Error';
+      }
+    }
+  </script>
+
+</body>
+</html>

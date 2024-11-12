@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript OBJECT </title>
+     <style>
+        body {
+            font-size: 26px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="header">
+    <h1>HELLO JAVASCRIPT</h1>
+    </div>
+       <hr>
+    <div id="p1"></div><br><br>
+    <div id="p2"></div><br><br>
+    <div id="p3"></div><br><br>
+    <div id="p4"></div><br><br>
+    <div id="p5"></div><br><br>
+    <div id="p6"></div><br><br>
+    <div id="p7"></div><br><br>
+
+<div id="demo1"></div>
+    <script>
+               const  person = {
+            id : "123456",
+                    fname :"Anaya",
+                    lname : "Singh",
+                    age : 1,
+                    contact : "9266719351"
+
+                };
+
+                 //ADD NEW PROPERTY 
+        person.country =f:\SAY_Javascript\fatchnikita.html "India";
+        
+        const name = person.id + " " + person.fname + " " + person.lname + " " +person.age + " " + person.contact + " " + person.country ;
+         document.getElementById("p1").innerHTML = name;
+        document.getElementById("p1").style.color = "blue";
+    //using loop
+let p ="  ";
+for (let x in person){
+p += person[x]+ " ";
+}
+ document.getElementById("p2").innerHTML = p;
+ document.getElementById("p2").style.color = "red" ;
+
+        // using Object.values()
+document.getElementById("p3").innerHTML = Object.values(person);
+document.getElementById("p3").style.color ="green";
+
+        // using JSON.Stringfy()
+        document.getElementById("p4").innerHTML = JSON.stringify(person);
+        document.getElementById("p4").style.color = "Orange";
+
+      //  method 2
+const emp = {};
+//add property
+ emp.empid = "10001";
+ emp.empname = "Nikita Rawat";
+ emp.Post = "asst.manage";
+ emp.Gender = "Female";
+ emp.Salary = 25000.00;
+
+        // using Object.values()
+let e1 = document.getElementById('p5');
+e1.innerHTML = Object.values(emp);
+e1.style.color = "green";
+e1.style.fontSize = "40px";
+
+
+
+//method 3
+
+const item = new Object();
+item.id = "101";
+item.titile = "PandBag";
+item.color = "Pink";
+item.size = "Xl";
+item.brand = "Gucci";
+item.Price = 1799.00;
+item.ingurl = "https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1648225883/702732_U3ZDT_5479_008_060_0000_Light-Gucci-Diana-mini-tote-bag.jpg"
+
+document.getElementById('p6').innerHTML = Object.values(item);
+document.getElementById(("Image1").src = Item.imgurl);
+        document.getElementById("p6").style.color = "gray";
+
+
+
+        // Object Within Object
+
+        const Person1 = {
+            pid: "10011", pname: "Harsh", city: "Delhi",
+            Bike: {
+                model: "R15",
+                brand: "Yamaha",
+                color: "Black",
+                engine: "300cc",
+                price: 250000.00
+            }
+
+        };
+
+        
+
+        const info1 = Person1.pid + "<br>" + Person1.pname + "<br>" + Person1.city + "<br>" + Person1.Bike.model + " " + Person1.Bike.brand;
+        document.getElementById("p7").innerHTML = info1;
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

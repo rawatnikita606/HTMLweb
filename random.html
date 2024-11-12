@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Paragraph Display</title>
+  <style>
+    .random-paragraph {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin: 20px;
+    }
+    
+  </style>
+</head>
+<body>
+
+<div class="random-paragraph" id="randomParagraph">Welcome! Text will change soon...</div>
+
+<script>
+    // Array of random paragraph options
+const paragraphs = [
+"Hello Anaya's Mommy",
+  "This is the first random message.",
+  "Here comes another interesting sentence.",
+  "Did you know? Random facts make things fun!",
+  "Just another random piece of text here.",
+  "Coding is fun, especially with random things!",
+  "Surprise! Another message has appeared."
+];
+
+// Function to update paragraph with a random one from the array
+function displayRandomParagraph() {
+  const randomParagraph = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+  document.getElementById("randomParagraph").textContent = randomParagraph;
+}
+
+// Set interval to change paragraph every 3 seconds
+setInterval(displayRandomParagraph, 3000);
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

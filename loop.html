@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops in javascript </title>
+    <style>
+         ul li{
+            list-style-type:none;
+
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Car list</h2>
+    <div id="demo"></div>
+    <div id="name"></div>
+    <script>
+        //while
+    let x = 1;
+    while(x<=10)
+    {
+        document.write("jai shree ram"+"<br>");
+        x++;
+    }                                                                                                                                                                                                                                                                                                   
+
+//do while
+let y = 1;
+do {
+    document.write("JAI SHREE RAM!" + "<br>");
+    y++;
+}
+while(y<=10);
+//For loop
+
+for (let z=1; z<10; z++)
+{
+    document.write("Hare Ram" + " <br>");
+}
+
+//for in loop
+let cars = ["BMW", "VOLVO", "HONDA", "SUZUKI", "MARUTI"];
+const price=[22345, 435622, 345378,5463782,6758596];
+
+let carlist="<ul>";
+
+
+for (let a in cars)
+{
+    carlist+="<li>"+cars[a] + "=> "+price[a]+"</li>";
+    //document.write(cars[a] + " "+price[a]+"<br>");
+}
+carlist+="</ul>";
+
+document.getElementById('demo').innerHTML=carlist;
+
+document.write("<br>");
+
+for (let b of cars)
+{
+    document.write(b +"<br>");
+
+}
+/*
+let text = "";
+for (let i=0; i<10; i++) {
+    if (i===2){break ;}
+    text +="The  number is " + i + "<br>";
+}
+document.getElementById('name').innerHTML = text;*/
+
+const carName = ["VOLVO", " MARUTI", "HONDA", "AUDI", "SAAB", "FAIT"];
+let text="";
+list: {
+    text+=cars[0]+ "<br>";
+     text+=cars[1]+ "<br>";
+    text+=cars[2]+ "<br>";
+   
+    break list;
+   text+=cars[3]+ "<br>";
+   text+=cars[4]+ "<br>";
+   text+=cars[5]+ "<br>";
+}
+document.getElementById('name').innerHTML = text;
+
+    </script>
+</body>
+</html>

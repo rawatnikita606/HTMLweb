@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="date"></div>
+    <div id="time"></div>
+    <div id="dob"></div>
+    <script>
+        const today=new Date();
+       const tdate = today.getFullYear() + "-" + (today.getMonth() +1 ) + "-" + today.getDate();
+
+ document.getElementById('date').innerHTML  = tdate;
+ setInterval(() => {
+    const today = new Date();
+    document.getElementById('time').innerHTML = today.toLocaleTimeString();
+ }, 1000)
+
+ const dob = new Date("2000-05-30");
+ document.getElementById('dob').innerHTML = dob;
+ console.log(dob.getFullYear());
+
+    </script>
+</body>
+</html>

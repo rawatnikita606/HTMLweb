@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <title>if else condition</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <h1 id="elseif"></h1>
+    <script>
+if (new Date().getHours()>20)
+{
+    document.getElementById("demo").innerHTML = "Good Day";
+}
+else{
+ document.getElementById("demo").innerHTML = "Good Evening";
+}
+
+let y=parseInt(prompt("Enter a Number:"));
+if(y%3==0)
+{
+alert("Even number");
+}
+else
+{
+    alert("odd number");
+}
+
+
+let n=parseInt(prompt("Enter a Number"));
+if (n%2 == 0)
+{
+alert("Even number");
+}
+else 
+{
+    alert("odd number");
+}
+
+console.log(n);
+
+
+let marks=parseInt(prompt("Enter a marks"));
+if (marks<65)
+{
+    alert("Upgrade")
+}
+ else if (marks<70)
+{
+alert("Good");
+}
+
+ else if (marks<80)
+{
+    alert("very Good")
+}
+
+ else if (marks<99)
+{
+    alert("Excelent")
+}
+else
+{
+    alert("Congratulation");
+}
+let time = new Date().getHours();
+let greeting;
+if (time <10){
+    greeting = "Good Morning";
+}
+else if(time < 20){
+greeting = "Good Day";
+}
+
+else{
+    greeting = "Good Evening";
+}
+
+
+    </script>
+    
+</body>
+</html>

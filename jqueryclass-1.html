@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<script src="jquery.min.js"></script>
+
+</head>
+<body>
+   <button>click me </button>
+   <button id="showbtn">show </button>
+
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aliquam recusandae delectus, ab mollitia quos! Suscipit labore unde quas, distinctio nostrum inventore consequuntur quam. Nihil facere laudantium ducimus suscipit assumenda neque provident maxime consequuntur. Autem accusamus suscipit pariatur doloremque asperiores tempora nihil maiores fugit optio dolorem obcaecati omnis ab illo officiis beatae doloribus, facilis unde aspernatur provident iure quae ea distinctio dignissimos. Officiis exercitationem ipsa quibusdam aut alias neque? Vitae accusamus, iste pariatur ducimus, quidem veritatis aspernatur quis quaerat, voluptates delectus earum! Qui natus cumque voluptatum inventore nesciunt, officiis neque veniam nam ipsam, soluta enim. Eos ipsum rem architecto corrupti!</p>
+    <script>
+ $(document).ready(function(){
+        $("button").click(function(){
+                alert("good morning India!");
+                $("p").hide();
+        });
+
+        $("#showbtn").click(
+            ()=>{
+               $("p").show(); 
+            }
+        )
+    });
+    </script>
+</body>
+</html>

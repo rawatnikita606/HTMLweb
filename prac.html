@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iteraction array</title>
+</head>
+<body>
+    
+      <div id="div1"></div>
+
+
+    <script>
+const movie=[
+{
+movieName:"209",
+date:"24",
+year:2024,
+ticket:700
+},
+
+{
+movienid:"2056",
+date:"24",
+year:2024,
+ticket:700
+},
+
+{
+movienid:"209",
+date:"24",
+year:2024,
+ticket:700
+},
+
+{
+movienid:"209",
+date:"24",
+year:2024,
+ticket:700
+},
+
+{
+movienid:"209",
+date:"24",
+year:2024,
+ticket:700
+},
+
+{
+movienid:"2345",
+date:"24",
+year:2014,
+ticket:900
+},
+
+{
+moviename:"259",
+date:"24",
+year:2024,
+ticket:600
+},
+
+{
+moviename:"2095",
+date:"24",
+year:2524,
+ticket:700
+},
+
+{
+movieid:345,
+date:"24",
+year:2074,
+ticket:500
+},
+
+{
+movieid:"2459",
+date:"24",
+year:2024,
+ticket:700
+},
+
+{
+movieid:"2095",
+date:"24",
+year:2074,
+ticket:730
+},
+{
+movieid:"2095",
+date:"24",
+year:2054,
+ticket:700
+},
+
+{
+movieid:"2039",
+date:"24",
+year:2054,
+ticket:800
+}
+];
+
+movielist="<ul>";
+    function movieDisplay(movi)
+    {
+        movielist+= "<li>" +movi.movieid+" "+movi.date+ " "+ movi.year+ " "+movi.ticket+" "+"</li>";
+    }
+movielist+="</ul>";
+movie.forEach(movieDisplay)
+console.log(movielist);
+document.getElementById("div1").innerHTML = movielist;
+
+    </script>
+</body>
+</html>

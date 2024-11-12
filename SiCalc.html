@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Interest Calculator</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .calculator {
+      width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <h2 class="text-center">Simple Interest Calculator</h2>
+    <form id="interestForm">
+      <div class="form-group">
+        <label for="principal">Principal Amount (P):</label>
+        <input type="number" class="form-control" id="principal" placeholder="Enter principal amount" required>
+      </div>
+
+      <div class="form-group">
+        <label for="rate">Annual Interest Rate (R%):</label>
+        <input type="number" class="form-control" id="rate" placeholder="Enter interest rate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Time (T in years):</label>
+        <input type="number" class="form-control" id="time" placeholder="Enter time in years" required>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-block" onclick="calculateInterest()">Calculate Interest</button>
+    </form>
+
+    <div class="mt-4">
+      <h4 class="text-center">Simple Interest (SI):</h4>
+      <p class="text-center" id="result">0</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript -->
+  <script>
+    function calculateInterest() {
+      const principal = parseFloat(document.getElementById('principal').value);
+      const rate = parseFloat(document.getElementById('rate').value);
+      const time = parseFloat(document.getElementById('time').value);
+
+      if (isNaN(principal) || isNaN(rate) || isNaN(time) || principal <= 0 || rate <= 0 || time <= 0) {
+        alert('Please enter valid inputs');
+        return;
+      }
+
+      // Formula: SI = (P * R * T) / 100
+      const simpleInterest = (principal * rate * time) / 100;
+
+      document.getElementById('result').textContent = `₹ ${simpleInterest.toFixed(2)}`;
+    }
+  </script>
+
+</body>
+</html>

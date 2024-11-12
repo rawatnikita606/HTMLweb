@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> paragraph color</title>
+    <style>
+        p{
+            font-size: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div id="div1"></div>
+
+    <form action="" method="post">
+        <input type="button" value="click" id="btn1">
+    </form>
+
+<p class="intro"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, accusamus1</p>
+<p id="bold"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, accusamus2</p>
+<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, accusamus3</p>
+<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, accusamus4</p>
+<p class="intro"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, accusamus5</p>
+
+
+    <script>
+        function pcolor() {
+   const  allpara= document.getElementsByTagName("p"); 
+   console.log(allpara[1]);
+
+   for(let i=0;i<allpara.length;i++ )
+   {
+    allpara[i].style.color="RED";
+   }
+
+
+}
+pcolor();
+ const x=document.getElementsByClassName("intro");
+ x[0].style.color="blue";
+
+
+ document.getElementById("btn1").addEventListener("click",()=>{
+   // alert("hello NIKITA");
+   const date=new Date();
+
+   document.getElementById("div1").innerHTML=date;
+ })
+
+
+   document.getElementById('bold').addEventListener("mouseover",()=>{
+   document.getElementById('bold').style.fontSize="43px"; 
+})
+document.getElementById('bold').addEventListener("mouseleave",()=>{
+   document.getElementById('bold').style.fontSize="20px"; r
+})
+
+
+    </script>
+</body>
+</html>
+

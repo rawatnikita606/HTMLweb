@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Iteration Method</title>
+</head>
+<body>
+    <div id="div"></div>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="demo3"></div>
+    <div id="demo4"></div>
+    <div id="demo5"></div>
+    
+   
+
+    <script>
+        const BOOK=[
+        {
+        bookid:"500",
+        booktitle:"C",
+        auther:"Bala",
+        year:2017,
+        price:2999
+
+
+
+        },
+        {
+        bookid:"501",
+        booktitle:"cpp",
+        auther:" C Bala",
+        year:2017,
+           price:2999
+        },
+        {
+        bookid:"506",
+        booktitle:"cpp",
+        auther:" E Bala",
+        year:2017,
+           price:2900
+        },
+        {
+        bookid:"508",
+        booktitle:"cpp",
+        auther:"Bala",
+        year:2017,
+           price:299.99
+        },
+        {
+             bookid:"502",
+        booktitle:"css",
+        auther:"Bala",
+        year:2017,
+           price:2999
+        },
+        {
+        bookid:"503",
+        booktitle:"html",
+        auther:"Bala",
+        year:2017,
+           price:2999
+        },
+        {
+             bookid:"100",
+        booktitle:"javascript",
+        auther:"hrry",
+        year:2017,
+           price:2349
+        },
+         {
+             bookid:"101",
+        booktitle:"javascript",
+        auther:"Bala",
+        year:2017,
+           price:299.9
+        },
+         {
+             bookid:"102",
+        booktitle:"javascript",
+        auther:"null",
+        year:2012,
+           price:4532
+        },
+         {
+             bookid:"103",
+        booktitle:"javascript",
+        auther:"sum",
+        year:2018,
+           price:3459
+        }
+
+        ];
+
+
+        booklist="<ul>";
+        function displayBook(book)
+        {
+            booklist+="<li>"+book.bookid+" "+book.booktitle+" "+book.auther+" "+book.year +" "+book.price+" "+"</li>";
+        }
+        booklist+="</ul>";
+
+        BOOK.forEach(displayBook);
+        document.getElementById("div1").innerHTML=booklist;
+
+        // map()
+        // Arrow function
+    
+        const Show=(book)=>{
+            return "<h4>"+book.bookid+" "+book.booktitle+" "+book.auther+" "+book.year +" "+book.price+" "+"</h2>"; 
+
+        }
+       const newbooklist= BOOK.map(Show);
+
+        document.getElementById("div2").innerHTML=newbooklist;
+
+
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+document.getElementById("demo3").innerHTML = numbers2;
+function myFunction(value) {
+  return value * 2;
+}  
+const javascript=(book)=>{
+    return (book.booktitle=="java");
+}
+const filterbook=BOOK.filter(javascript);
+//console.log(filterbook[0].bookid);
+let data =" ";
+filterbook.forEach((book)=>{
+ "<h4>"+book.bookid+" "+book.booktitle+" "+book.auther+" "+book.year +" "+book.price+" "+"</h4>";
+})
+document.getElementById('demo4').innerHTML = data;
+// Filter ()
+/*
+const cppfilter=(book)=>{
+    return (book.booktitle=="cpp");
+}
+const filterbook=BOOK.filter(cppfilter);
+
+console.log(filterbook[0].bookid);
+
+let data=" ";
+
+filterbook.forEach((book)=>{
++="<h4>"+book.bookid+" "+book.booktitle+" "+book.auther+" "+book.year +" "+book.price+" "+"</h4>";
+})
+document.getElementById('demo4').innerHTML = data;
+*/
+//form()
+const myArr = Array.from("nikitarawatanayasingh");
+document.getElementById("div").innerHTML = myArr;
+data
+
+      const fruits = ["Banana","Guava", "apple", "Orange"];
+      document.getElementById('demo').innerHTML = fruits;
+
+function myFunction(){
+    fruits.push("Lemon");
+    document.getElementById('demo5').innerHTML = fruits;
+}
+
+
+    </script>
+</body>
+</html>

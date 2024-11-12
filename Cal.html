@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Using JavaScript Simple Calculator  </title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .calculator {
+      width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <h2 class="text-center">Simple Calculator</h2>
+    <form id="interestForm">
+      <div class="form-group">
+        <label for="principal">ENTER FIRST NUMBER:</label>
+        <input type="number" class="form-control" id="num1" placeholder="Enter number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="rate">ENTER SECOND NUMBER:</label>
+        <input type="number" class="form-control" id="num2" placeholder="Enter number" required>
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="time">Time (T in years):</label>
+        <input type="number" class="form-control" id="time" placeholder="Enter time in years" required>
+      </div> -->
+
+      <button type="button" class="btn btn-primary btn-inline" onclick="Add()">ADD</button>
+      <button type="button" class="btn btn-primary btn-inline" onclick="Sub()">-</button>
+      <button type="button" class="btn btn-primary btn-inline" onclick="Mul()">*</button>
+      <button type="button" class="btn btn-primary btn-inline" onclick="divi()">/</button>
+      <button type="button" class="btn btn-primary btn-inline" onclick="mod()">%</button>
+    </form>
+
+    <div class="mt-4">
+      <h4 class="text-center">Result:</h4>
+      <p class="text-center" id="result">0</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript -->
+  <script>
+    function Add() {
+      const a = parseInt(document.getElementById('num1').value);
+      const b = parseInt(document.getElementById('num2').value);
+      //const time = parseFloat(document.getElementById('time').value);
+
+      if (isNaN(a) || isNaN(b)) {
+        alert('Please enter valid inputs');
+        return;
+      }
+
+      // Formula: SI = (P * R * T) / 100
+      const c=a+b;
+
+      document.getElementById('result').textContent = ` ${c.toFixed(2)}`;
+    }
+
+// Sub
+function Sub() {
+      const a = parseInt(document.getElementById('num1').value);
+      const b = parseInt(document.getElementById('num2').value);
+      //const time = parseFloat(document.getElementById('time').value);
+
+      if (isNaN(a) || isNaN(b)) {
+        alert('Please enter valid inputs');
+        return;
+      }
+
+      // Formula: SI = (P * R * T) / 100
+      const c=a-b;
+
+      document.getElementById('result').textContent = ` ${c.toFixed(2)}`;
+    }
+
+function Mul()
+{
+        const a =parseInt(document.getElementById('num1').value);
+        const b =parseInt(document.getElementById('num2').value);
+    
+if (isNaN(a) || isNaN(b)) {
+        alert('Please enter valid inputs');
+        return;
+      }
+
+const c=a*b;
+ document.getElementById('result').textContent = ` ${c.toFixed(2)}`;
+}
+
+function divi()
+{
+    const a =parseInt(document.getElementById('num1').value);
+    const b =parseInt(document.getElementById('num2').value);
+    if (isNaN(a) || isNaN(b)){
+        alert('please enter valid inputs');
+        return;
+    }
+    const c=a/b;
+    document.getElementById('result').textContent = `${c.toFixed(2)}`;
+}
+
+
+function mod(){
+    const a = parseInt(document.getElementById('num1').value);
+    const b = parseInt(document.getElementById('num2').value);
+    if (isNaN(a) || isNaN(b)){
+        alert('please enter vlid inputs');
+        return;
+    }
+    const c=a%b;
+    document.getElementById('result').textContent = `${c.toFixed(2)}`;
+}
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js operator</title>
+</head>
+<body>
+    <!-- <div id="div1"></div>
+    <script>
+        let x=100;
+        let y=200;
+        let z=x/y;
+        console.log(z); 
+        document.getElementById("div1").innerHTML=z;
+// PEDMAS  
+    </script> -->
+
+
+ <header>
+    <h1 id="name">HELLO JAVASCRIPT </h1>
+    <h3 id="same">Hello world</h3>
+    <hr>
+    <button onclick="alert(' Hello Anaya Singh')">click here</button>
+    <button onclick="alert('Hello Anvi Rawat')">click me </button>
+    <marquee behavior="" direction="" style="text-transform:capitalize;" onmouseover="this.stop();" onmouseleave="this.start();">Hello JAVASCRIPT</marquee>
+ </header>
+
+<div id="aani"></div>
+<div id="div2"></div>
+
+<script>
+    document.getElementById("name").style.textAlign="center";
+    document.getElementById('same').style.fontFamily="verdana";
+    document.getElementById('same').style.textAlign="center"
+    let x=10;
+    let y=20;
+    let z=y+x;
+    document.getElementById('aani').innerHTML=z;
+    var a=40;
+    var b=20;
+    var c=a**b;
+document.getElementById('div2').innerHTML=c;
+if (a>b)
+console.log("a is greater then b");
+else 
+console.log("b is greater then a");
+
+let result = a>b?a:b;
+console.log (result);
+/*if (a>b)
+result =a;
+else result =b;*/
+
+var e=10;
+var f="10";
+console.log(x===y);
+
+console.log("square root of 10   ="+Math.sqrt(10));
+console.log("power of 10   ="+Math.pow(10,3));
+console.log("power of 10   ="+10**3);
+console.log("power of 10   ="+10*10*10);
+
+function Sicalculater(p,r,t)
+{
+    let si=p*r/100*t;
+    return si;
+}
+
+    let res=Sicalculater(10000,8.5,5);
+    console.log("si is ="+ res);
+
+    function Function(l,b)
+    {
+        let a=l*b;
+        return a;
+    }
+    let re=Function(10,20);
+    console.log("a is="+re);
+
+
+    function Myfunction(p1,p2)
+    {
+        let ni=p1+p2;
+        return ni;
+    }
+
+let r=Myfunction(30,30);
+console.log("ni is="+ r);
+
+
+
+
+function Add(l,m)
+{
+    let p=l+m;
+    return p;
+}
+let t=Add(500,500);
+console.log("p is="+t);
+
+
+
+
+
+function  Circule(radius)
+{
+let A=Math.PI*radius*radius;
+return A;
+}
+let rest=Circule(20,30);
+console.log("A is="+rest);
+
+
+
+function Java(radius)
+{
+    let Aani=Math.PI*radius*radius;
+    return Aani;<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .calculator {
+      width: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .calculator input {
+      height: 50px;
+      text-align: right;
+      font-size: 1.5rem;
+    }
+    .calculator .btn {
+      width: 25%;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <input type="text" class="form-control mb-3" id="result" disabled>
+
+    <div class="row">
+      <button class="btn btn-secondary" onclick="clearResult()">C</button>
+      <button class="btn btn-secondary" onclick="deleteChar()">DEL</button>
+      <button class="btn btn-secondary" onclick="appendOperator('/')">/</button>
+      <button class="btn btn-secondary" onclick="appendOperator('*')">*</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn-light" onclick="appendNumber('7')">7</button>
+      <button class="btn btn-light" onclick="appendNumber('8')">8</button>
+      <button class="btn btn-light" onclick="appendNumber('9')">9</button>
+      <button class="btn btn-secondary" onclick="appendOperator('-')">-</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn-light" onclick="appendNumber('4')">4</button>
+      <button class="btn btn-light" onclick="appendNumber('5')">5</button>
+      <button class="btn btn-light" onclick="appendNumber('6')">6</button>
+      <button class="btn btn-secondary" onclick="appendOperator('+')">+</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn-light" onclick="appendNumber('1')">1</button>
+      <button class="btn btn-light" onclick="appendNumber('2')">2</button>
+      <button class="btn btn-light" onclick="appendNumber('3')">3</button>
+      <button class="btn btn-primary" onclick="calculate()">=</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn-light" onclick="appendNumber('0')">0</button>
+      <button class="btn btn-light" onclick="appendNumber('.')">.</button>
+      <button class="btn btn-light" style="width: 50%;" onclick="appendOperator('%')">%</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript -->
+  <script>
+    let result = document.getElementById('result');
+
+    function appendNumber(number) {
+      result.value += number;
+    }
+
+    function appendOperator(operator) {
+      result.value += operator;
+    }
+
+    function clearResult() {
+      result.value = '';
+    }
+
+    function deleteChar() {
+      result.value = result.value.slice(0, -1);
+    }
+
+    function calculate() {
+      try {
+        result.value = eval(result.value);
+      } catch (error) {
+        result.value = 'Error';
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+}
+let niki=Java(4,4.5);
+console.log("Aani is="+niki);
+
+function myColor(){
+    document.bgColor="red";
+
+}
+
+
+</script>
+<button  type="button" onclick="myColor()" onclick="myColor">color changed...</button>
+</body>
+</html>
+ 
